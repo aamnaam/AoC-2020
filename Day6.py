@@ -10,14 +10,10 @@ def get_all_yes(group_answer):
     individual_answers = group_answer.split("\n")
     num_members = len(individual_answers)
     question_ids = [0]*26
-    num_questions_answered = 0
     for each_answer in individual_answers:
         for x in each_answer:             # checking each question number
             question_ids[ord(x)-97] += 1
-    for x in question_ids:
-        if x == num_members:
-            num_questions_answered += 1
-    return num_questions_answered
+    return question_ids.count(num_members)
 
 
 def main():
