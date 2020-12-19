@@ -89,7 +89,7 @@ def main():
         move_waypoint(movement)
         rotate_waypoint(movement)
         move_ship_to_wayp(movement)
-    print("Part 2: ", curr_x, curr_y)
+    print("Part 2: ", abs(curr_x) + abs(curr_y))
 
 
 if __name__ == '__main__':
